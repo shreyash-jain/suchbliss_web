@@ -1,0 +1,45 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/auth/logout",
+      "mountPath": "/api/auth",
+      "method": "POST",
+      "module": [
+        "api/auth/logout.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/api/auth/send-otp",
+      "mountPath": "/api/auth",
+      "method": "POST",
+      "module": [
+        "api/auth/send-otp.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/api/auth/verify-otp",
+      "mountPath": "/api/auth",
+      "method": "POST",
+      "module": [
+        "api/auth/verify-otp.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/_next/image",
+      "mountPath": "/_next",
+      "method": "GET",
+      "module": [
+        "_next/image.js:onRequestGet"
+      ]
+    },
+    {
+      "routePath": "/",
+      "mountPath": "/",
+      "method": "",
+      "middleware": [
+        "_middleware.js:onRequest"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
